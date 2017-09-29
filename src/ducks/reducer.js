@@ -10,7 +10,11 @@ const initialState = {
     loan: 0,
     mortgage: 0,
     desiredRent: 0,
-    listings: []
+    listings: [],
+    username: '',
+    password: '',
+    newName: '',
+    newPassword: ''
 }
 
 const UPDATE_RECOMMENDED_RENT = "UPDATE_RECOMMENDED_RENT";
@@ -25,6 +29,10 @@ const UPDATE_LOAN = "UPDATE_LOAN";
 const UPDATE_MORTGAGE = "UPDATE_MORTGAGE";
 const UPDATE_DESIRED_RENT = "UPDATE_DESIRED_RENT";
 const UPDATE_LISTINGS = "UPDATE_LISTINGS";
+const UPDATE_USERNAME = "UPDATE_USERNAME";
+const UPDATE_PASSWORD = "UPDATE_PASSWORD";
+const UPDATE_NEW_NAME = "UPDATE_NEW_NAME";
+const UPDATE_NEW_PASSWORD = "UPDATE_NEW_PASSWORD";
 
 function reducer(state = initialState, action){
     switch(action.type){
@@ -52,6 +60,14 @@ function reducer(state = initialState, action){
             return Object.assign({}, state, { desiredRent: action.payload })
         case UPDATE_LISTINGS: 
             return Object.assign({}, state, { listings: action.payload })
+        case UPDATE_USERNAME: 
+            return Object.assign({}, state, { username: action.payload })
+        case UPDATE_PASSWORD: 
+            return Object.assign({}, state, { password: action.payload })
+        case UPDATE_NEW_NAME: 
+            return Object.assign({}, state, { newName: action.payload })
+        case UPDATE_NEW_PASSWORD: 
+            return Object.assign({}, state, { newPassword: action.payload })
     }
 }
 
@@ -97,7 +113,7 @@ export function updateAddressThree(addressThree) {
     }
 }
 
-export function updateAddressThree(addressFour) {
+export function updateAddressFour(addressFour) {
     return {
         type: UPDATE_ADDRESS_FOUR,
         payload: addressFour
@@ -139,6 +155,33 @@ export function updateListings(listings) {
     }
 }
 
+export function loginName( username ){
+    return {
+        type: UPDATE_USERNAME,
+        payload: username
+    }
+}
+
+export function loginPassword( password ){
+    return {
+        type: UPDATE_PASSWORD,
+        payload: password
+    }
+}
+
+export function registerName( newName ){
+    return {
+        type: UPDATE_NEW_NAME,
+        payload: newName
+    }
+}
+
+export function registerPassword( newPassword ){
+    return {
+        type: UPDATE_NEW_PASSWORD,
+        payload: newPassword
+    }
+}
 
 
 export default reducer;
