@@ -11,7 +11,7 @@ class Header extends Component {
                 <div className="Header_Container">
                     <header className="Header">
                         
-                        <h1 className="App-title">Houser Dashboard</h1>
+                        <h1 className="App-title">Welcom to React</h1>
                     </header>
                 </div>
             )
