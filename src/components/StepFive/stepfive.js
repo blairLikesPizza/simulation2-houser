@@ -28,7 +28,7 @@ class StepFive extends Component {
 }
 
 function mapStateToProps( state ){
-    const { updateDesiredRent } = state;
+    const { desiredRent } = state;
     return {
         desiredRent
     };
