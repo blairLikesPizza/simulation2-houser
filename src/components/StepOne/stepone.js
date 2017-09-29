@@ -28,11 +28,11 @@ class StepOne extends Component {
 }
 
 function mapStateToProps( state ){
-    const { name, description } = state;
-
+    // const { name, description } = state;
+    // console.log(name);
+       console.log(state)
     return {
-        name,
-        description
+        state
     };
 }
 
