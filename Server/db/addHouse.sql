@@ -8,4 +8,4 @@ INSERT INTO Houses(Name,Description,Address,City,ImageURL,Loan,MonthlyMorgage,De
     $6, -- Loan value
     $7, -- MonthlyMorgage value
     $8  -- DesiredRent value
-  )
+  );
